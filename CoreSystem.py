@@ -38,7 +38,7 @@ def CreateQR(msg):
 		with open(image_path, 'rb') as photo:
 			bot.send_photo(msg.chat.id, photo)
 			
-	def RemoveFile(RandomCode):
+	def DeleteFile(RandomCode):
 		path = f"qrcode{RandomCode}.png"
 		try:
 			os.remove(path)
@@ -58,5 +58,5 @@ def CreateQR(msg):
 	else:
 		SettingCreate(text, RandomCode)
 		SendImage(msg, RandomCode)
-		RemoveFile(RandomCode)
+		DeleteFile(RandomCode)
 		Delete(msg)
