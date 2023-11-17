@@ -1,0 +1,2 @@
+#    -KEY TELEGRAM BOT-
+API_KEY = 'KEY CỦA BẠN'
