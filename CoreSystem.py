@@ -19,6 +19,11 @@ def Delete(msg):
 	message_id = msg.message_id
 	bot.delete_message(chat_id=chat_id, message_id=message_id)
 
+def CmdChat(msg):
+	user = msg.from_user.id
+	text = msg.text
+	print(f"\nUser: {user}\nChat: {text}")
+
 def CreateQR(msg):
 	
 	def SettingCreate(data, RandomCode):
@@ -45,7 +50,7 @@ def CreateQR(msg):
 			print(f'The file {path} has been deleted successfully.')
 		except FileNotFoundError:
 			print(f'The file {path} does not exist.')
-	
+	Cmdchat(msg)
 	A = 100000 ; B = 999999
 	RandomCode = randint(A, B)
 	text = msg.text
